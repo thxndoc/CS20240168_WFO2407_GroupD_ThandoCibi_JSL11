@@ -10,8 +10,11 @@
 2. Bug fix: functions - lines 61, 156, 172, 173
     - **What I did:** Fixed syntax errors for click event handler to `[X].addEventListener ("click", () => {...})`
 
-3. `filterAndDisplayTasksByBoard` function
+3. Bug fix: `filterAndDisplayTasksByBoard` function
     - **What I did:** Fixed comparison operators from `=` to `===`
+
+4. Bug fix: `styleActiveBoard` function
+    - **What I did:** Changed `foreach` to `forEach` & added `classList` to methods
 
 ### [JSL11] Agile Board - Kanban Task Management App
 
