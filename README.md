@@ -3,9 +3,9 @@
 
 ## Documenting my progress 💻💭
 1. Bug fix - `initializeData` function - Line 18
-    - **What I did:** Added null to the if statement to explicitly return null when no data exists and removed the "!". Now if statement reads as "if data in local storage is null (does not exist), then add initialData."
+    - **What I did:** Added `null` to the if statement to explicitly return `null` when no data exists and removed the `!`. Now if statement reads as "if data in local storage is `null` (does not exist), then add initialData."
     - **Challenges:** None so far
-    - **What I learned:** Explicitly returning null for data that does not exist prevents problems in the long run when there are falsy values added to localStorage. Ensures consistency.
+    - **What I learned:** Explicitly returning `null` for data that does not exist prevents problems in the long run when there are falsy values added to localStorage. Ensures consistency.
 
 
 
