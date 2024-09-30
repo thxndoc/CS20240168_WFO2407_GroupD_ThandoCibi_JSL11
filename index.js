@@ -237,7 +237,9 @@ function toggleSidebar(show) {
 }
 
 function toggleTheme() {
-  
+  document.body.classList.toggle("light-theme")
+  const lightTheme = document.body.classList.contains("light-theme")
+  localStorage.setItem("light-theme", lightTheme ? "enabled" : "disabled")
 }
 
 
