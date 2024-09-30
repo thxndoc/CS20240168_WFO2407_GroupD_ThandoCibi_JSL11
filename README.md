@@ -24,6 +24,10 @@
 1. Called `initializeData` in `init` function to display boards and tasks
     - **Why:** to ensure the data is set up when fetching and displaying the boards and tasks
 
+2. Completed function for the `toggleSideBar` function
+    - **What I did:**Fetched elements and set display
+    -**Why:** To control the visibility of the sidebar based on whether `show` is true or false
+
 
 ### [JSL11] Agile Board - Kanban Task Management App
 
