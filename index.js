@@ -27,6 +27,11 @@ function initializeData() {
 const elements = {
 headerBoardName: document.getElementById("header-board-name"),
 filterDiv: document.getElementById("filterDiv"),
+hideSideBarBtn: document.getElementById("hide-side-bar-btn"),
+showSideBarBtn: document.getElementById("show-side-bar-btn"),
+themeSwitch: document.getElementById("switch"),
+createNewTaskBtn: document.getElementById("create-task-btn"),
+modalWindow: document.getElementById("new-task-modal-window")
 }
 
 let activeBoard = ""
@@ -74,7 +79,7 @@ function displayBoards(boards) {
 // TASK: Fix Bugs
 function filterAndDisplayTasksByBoard(boardName) {
   const tasks = getTasks(); // Fetch tasks from a simulated local storage function
-  const filteredTasks = tasks.filter(task => task.board = boardName);
+  const filteredTasks = tasks.filter(task => task.board === boardName);
 
   // Ensure the column titles are set outside of this function or correctly initialized before this function runs
 
@@ -89,7 +94,7 @@ function filterAndDisplayTasksByBoard(boardName) {
     const tasksContainer = document.createElement("div");
     column.appendChild(tasksContainer);
 
-    filteredTasks.filter(task => task.status = status).forEach(task => { 
+    filteredTasks.filter(task => task.status === status).forEach(task => { 
       const taskElement = document.createElement("div");
       taskElement.classList.add("task-div");
       taskElement.textContent = task.title;
@@ -182,7 +187,7 @@ function setupEventListeners() {
   });
 
   // Add new task form submission event listener
-  elements.modalWindow.addEventListener('submit',  (event) => {
+  elements.modalWindow.addEventListener('submit', (event) => {
     addTask(event)
   });
 }
