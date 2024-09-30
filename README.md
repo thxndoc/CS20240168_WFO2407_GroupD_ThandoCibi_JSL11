@@ -1,3 +1,14 @@
+## Link to Loom video
+[My Loom Video](insert link here)
+
+## Documenting my progress 💻💭
+1. Bug fix - `initializeData` function - Line 18
+    - **What I did:** Added null to the if statement to explicitly return null when no data exists and removed the "!". Now if statement reads as "if data in local storage is null (does not exist), then add initialData."
+    - **Challenges:** None so far
+    - **What I learned:** Explicitly returning null for data that does not exist prevents problems in the long run when there are falsy values added to localStorage. Ensures consistency.
+
+
+
 ### [JSL11] Agile Board - Kanban Task Management App
 
 Welcome to the Agile Board project, the final project for the JSL course! In this portfolio piece project, you will be stepping into the shoes of a juniour developer tasked with bringing a Kanban Task Management App to life. You're not starting from scratch, though. In this project, you are tasked with tackling the provided user stories to both identify and fix bugs in the code, as well as to develop your own functions to extend the application's capabilities. Key assignments include importing utility functions, initializing data, and diving into debugging tasks such as setting up data correctly in local storage, dynamically displaying boards and tasks, and enhancing user interactions.
