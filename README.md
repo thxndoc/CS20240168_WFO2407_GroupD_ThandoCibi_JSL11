@@ -7,6 +7,9 @@
     - **Challenges:** None so far
     - **What I learned:** Explicitly returning `null` for data that does not exist prevents problems in the long run when there are falsy values added to localStorage. Ensures consistency.
 
+2. Bug fix - `displayBoards` function - Line 61
+    - **What I did:** Fixed syntax error for click event handler to `boardElement.addEventListener ("click", () => {...})`
+
 
 
 ### [JSL11] Agile Board - Kanban Task Management App
