@@ -27,6 +27,7 @@ function initializeData() {
 const elements = {
 headerBoardName: document.getElementById("header-board-name"),
 filterDiv: document.getElementById("filterDiv"),
+sideBarContainer: document.getElementById("side-bar-div"),
 hideSideBarBtn: document.getElementById("hide-side-bar-btn"),
 showSideBarBtn: document.getElementById("show-side-bar-btn"),
 themeSwitch: document.getElementById("switch"),
@@ -229,7 +230,10 @@ function addTask(event) {
 
 
 function toggleSidebar(show) {
- 
+  elements.sideBarContainer.style.display = show ? "block" : "none";
+  elements.hideSideBarBtn.style.display = show ? "block" : "none";
+  elements.showSideBarBtn.style.display = show ? "none" : "block";
+  localStorage.setItem("showSideBar", show);
 }
 
 function toggleTheme() {
