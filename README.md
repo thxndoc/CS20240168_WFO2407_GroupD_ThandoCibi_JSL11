@@ -2,6 +2,7 @@
 [My Loom Video](insert link here)
 
 ## Documenting my progress 💻💭
+### Bud Fixes
 1. Bug fix: `initializeData` function - Line 18
     - **What I did:** Added `null` to the if statement to explicitly return `null` when no data exists and removed the `!`. Now if statement reads as "if data in local storage is `null` (does not exist), then add initialData."
     - **Challenges:** None so far
@@ -18,6 +19,10 @@
 
 5. Bug fix: `addTaskToUI` function
     - **What I did:** Changed double quotes to backticks for template literal and added missing argument to `appendChild`
+
+### Solutions to incomplete function code
+1. Called `initializeData` in `init` function to display boards and tasks
+    - **Why:** to ensure the data is set up when fetching and displaying the boards and tasks
 
 
 ### [JSL11] Agile Board - Kanban Task Management App
