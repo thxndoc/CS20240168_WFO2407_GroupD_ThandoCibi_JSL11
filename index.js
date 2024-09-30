@@ -31,7 +31,8 @@ hideSideBarBtn: document.getElementById("hide-side-bar-btn"),
 showSideBarBtn: document.getElementById("show-side-bar-btn"),
 themeSwitch: document.getElementById("switch"),
 createNewTaskBtn: document.getElementById("create-task-btn"),
-modalWindow: document.getElementById("new-task-modal-window")
+modalWindow: document.getElementById("new-task-modal-window"),
+columnDivs: document.querySelectorAll(".column-div")
 }
 
 let activeBoard = ""
