@@ -35,7 +35,7 @@ themeSwitch: document.getElementById("switch"),
 createNewTaskBtn: document.getElementById("create-task-btn"),
 modalWindow: document.getElementById("new-task-modal-window"),
 columnDivs: document.querySelectorAll(".column-div"),
-titleInput: document.getElementById("task-title"),
+titleInput: document.getElementById("title-input"),
 descriptionInput: document.getElementById("desc-input"),
 selectStatus: document.getElementById("select-status"),
 editTaskTitleInput: document.getElementById("edit-task-title-input"),
@@ -197,7 +197,7 @@ function setupEventListeners() {
   });
 
   // Add new task form submission event listener
-  elements.modalWindow.addEventListener('submit', (event) => {
+  elements.createNewTaskBtn.addEventListener('submit', (event) => {
     addTask(event)
   });
 }
