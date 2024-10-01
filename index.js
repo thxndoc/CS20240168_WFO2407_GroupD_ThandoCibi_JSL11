@@ -38,7 +38,7 @@ columnDivs: document.querySelectorAll(".column-div"),
 titleInput: document.getElementById("task-title"),
 descriptionInput: document.getElementById("desc-input"),
 selectStatus: document.getElementById("select-status"),
-editTaskTitleInput: document.getElementById("dit-task-title-input"),
+editTaskTitleInput: document.getElementById("edit-task-title-input"),
 editTaskDescInput: document.getElementById("edit-task-desc-input"),
 editSelectStatus: document.getElementById("edit-select-status"),
 editTaskModalWindow: document.getElementById("edit-task-modal-window")
