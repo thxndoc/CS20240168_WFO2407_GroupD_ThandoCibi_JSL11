@@ -36,7 +36,10 @@ modalWindow: document.getElementById("new-task-modal-window"),
 columnDivs: document.querySelectorAll(".column-div"),
 titleInput: document.getElementById("task-title"),
 descriptionInput: document.getElementById("desc-input"),
-selectStatus: document.getElementById("select-status")
+selectStatus: document.getElementById("select-status"),
+editTaskTitleInput: document.getElementById("dit-task-title-input"),
+editTaskDescInput: document.getElementById("edit-task-desc-input"),
+editSelectStatus: document.getElementById("edit-select-status")
 }
 
 let activeBoard = ""
@@ -246,7 +249,9 @@ function toggleTheme() {
 
 function openEditTaskModal(task) {
   // Set task details in modal inputs
-  
+  editTaskTitleInput.value = task.title;
+  editTaskDescInput.value = task.description;
+  editSelectStatus = task.status;
 
   // Get button elements from the task modal
 

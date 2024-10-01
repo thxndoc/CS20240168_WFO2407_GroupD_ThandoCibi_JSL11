@@ -24,9 +24,14 @@
 1. Called `initializeData` in `init` function to display boards and tasks
     - **Why:** to ensure the data is set up when fetching and displaying the boards and tasks
 
-2. Completed function for the `toggleSideBar` function
+2. Completed function for `toggleSideBar`
     - **What I did:**Fetched elements and set display
     -**Why:** To control the visibility of the sidebar based on whether `show` is true or false
+
+3. Completed function for `toggleTheme`
+    - **What I did:**
+    - `document.body.classList.toggle("light-theme")`: check to see if `light-theme` class exists in the body and toggle on and off
+    - `const lightTheme = document.body.classList.contains("light-theme")`
 
 
 ### [JSL11] Agile Board - Kanban Task Management App
