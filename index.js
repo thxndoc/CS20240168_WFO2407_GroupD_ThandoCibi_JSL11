@@ -26,6 +26,7 @@ function initializeData() {
 // TASK: Get elements from the DOM
 const elements = {
 headerBoardName: document.getElementById("header-board-name"),
+addNewTaskBtn: document.getElementById("add-new-task-btn"),
 filterDiv: document.getElementById("filterDiv"),
 sideBarContainer: document.getElementById("side-bar-div"),
 hideSideBarBtn: document.getElementById("hide-side-bar-btn"),
@@ -190,7 +191,7 @@ function setupEventListeners() {
   elements.themeSwitch.addEventListener('change', toggleTheme);
 
   // Show Add New Task Modal event listener
-  elements.createNewTaskBtn.addEventListener('click', () => {
+  elements.addNewTaskBtn.addEventListener('click', () => {
     toggleModal(true);
     elements.filterDiv.style.display = 'block'; // Also show the filter overlay
   });
