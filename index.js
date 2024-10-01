@@ -39,7 +39,8 @@ descriptionInput: document.getElementById("desc-input"),
 selectStatus: document.getElementById("select-status"),
 editTaskTitleInput: document.getElementById("dit-task-title-input"),
 editTaskDescInput: document.getElementById("edit-task-desc-input"),
-editSelectStatus: document.getElementById("edit-select-status")
+editSelectStatus: document.getElementById("edit-select-status"),
+editTaskModalWindow: document.getElementById("edit-task-modal-window")
 }
 
 let activeBoard = ""
@@ -249,9 +250,9 @@ function toggleTheme() {
 
 function openEditTaskModal(task) {
   // Set task details in modal inputs
-  editTaskTitleInput.value = task.title;
-  editTaskDescInput.value = task.description;
-  editSelectStatus = task.status;
+  elements.editTaskTitleInput.value = task.title;
+  elements.editTaskDescInput.value = task.description;
+  elements.editSelectStatus.value = task.status;
 
   // Get button elements from the task modal
   const saveTaskChangesBtn = document.getElementById("save-task-changes-btn")
@@ -262,9 +263,19 @@ function openEditTaskModal(task) {
  saveTaskChangesBtn.addEventListener("click", saveTaskChanges(task.id))
 
   // Delete task using a helper function and close the task modal
+  deleteTaskBtn.addEventListener("click", () => {
+    deleteTask(task.id)
+    toggleModal(false, elements.editTaskModalWindow); //hide the edit task modal
+    refreshTasksUI()
+  })
 
+  cancelEditBtn.addEventListener("click", () => {
+    toggleModal(false, elements.editTaskModalWindow);
+  }
+)
 
-  toggleModal(true, elements.editTaskModal); // Show the edit task modal
+  toggleModal(true, elements.editTaskModalWindow); // Show the edit task modal
+
 }
 
 function saveTaskChanges(taskId) {
