@@ -280,16 +280,15 @@ function openEditTaskModal(task) {
 
 function saveTaskChanges(taskId) {
   // Get new user inputs
+  // Create an object with the updated task details
   const updatedTask = {
     title: elements.editTaskTitleInput.value,
     description: elements.editTaskDescInput.value,
     status: editSelectStatus.value
   }
 
-  // Create an object with the updated task details
-
-  // Update task using a hlper functoin
- 
+  // Update task using a helper functoin
+ patchTask(taskId, updatedTask)
 
   // Close the modal and refresh the UI to reflect the changes
 
