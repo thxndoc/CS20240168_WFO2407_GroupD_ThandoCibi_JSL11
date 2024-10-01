@@ -215,6 +215,7 @@ function addTask(event) {
 
   //Assign user input to the task object
     const task = {
+      id: Date.now(),
       title: titleInput.value,
       description: descriptionInput.value,
       status: selectStatus.value,
@@ -253,12 +254,12 @@ function openEditTaskModal(task) {
   editSelectStatus = task.status;
 
   // Get button elements from the task modal
-const saveTaskChangesBtn = document.getElementById("save-task-changes-btn")
-const cancelEditBtn = document.getElementById("cancel-edit-btn")
-const deleteTaskBtn = document.getElementById("delete-task-btn")
+  const saveTaskChangesBtn = document.getElementById("save-task-changes-btn")
+  const cancelEditBtn = document.getElementById("cancel-edit-btn")
+  const deleteTaskBtn = document.getElementById("delete-task-btn")
 
   // Call saveTaskChanges upon click of Save Changes button
- 
+ saveTaskChangesBtn.addEventListener("click", saveTaskChanges(task.id))
 
   // Delete task using a helper function and close the task modal
 
