@@ -25,6 +25,7 @@ function initializeData() {
 
 // TASK: Get elements from the DOM
 const elements = {
+logo: document.getElementById("logo"),
 headerBoardName: document.getElementById("header-board-name"),
 addNewTaskBtn: document.getElementById("add-new-task-btn"),
 filterDiv: document.getElementById("filterDiv"),
@@ -246,6 +247,8 @@ function toggleTheme() {
   document.body.classList.toggle("light-theme")
   const lightTheme = document.body.classList.contains("light-theme")
   localStorage.setItem("light-theme", lightTheme ? "enabled" : "disabled")
+
+  logo.src = lightTheme ? "./assets/logo-light.svg" : "./assets/logo-dark.svg";
 }
 
 
