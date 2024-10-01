@@ -41,7 +41,7 @@ selectStatus: document.getElementById("select-status"),
 editTaskTitleInput: document.getElementById("edit-task-title-input"),
 editTaskDescInput: document.getElementById("edit-task-desc-input"),
 editSelectStatus: document.getElementById("edit-select-status"),
-editTaskModalWindow: document.getElementById("edit-task-modal-window")
+editTaskModalWindow: document.querySelector(".edit-task-modal-window")
 }
 
 let activeBoard = ""
@@ -197,7 +197,7 @@ function setupEventListeners() {
   });
 
   // Add new task form submission event listener
-  elements.createNewTaskBtn.addEventListener('submit', (event) => {
+  elements.modalWindow.addEventListener('submit', (event) => {
     addTask(event)
   });
 }
@@ -218,9 +218,9 @@ function addTask(event) {
   //Assign user input to the task object
     const task = {
       id: Date.now(),
-      title: titleInput.value,
-      description: descriptionInput.value,
-      status: selectStatus.value,
+      title: document.getElementById("task-title").value,
+      description: document.getElementById("desc-input").value,
+      status: document.getElementById("select-status").value,
       board: activeBoard
     };
 
