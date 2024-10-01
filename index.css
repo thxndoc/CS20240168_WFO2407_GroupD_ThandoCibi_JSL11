@@ -65,7 +65,7 @@ body {
 .boards-nav-links-div {
   display: flex;
   flex-direction: column;
-
+  margin-top: 2rem;
   color: var(--primary-font-color);
   gap: 18px;
   height: 200px;
