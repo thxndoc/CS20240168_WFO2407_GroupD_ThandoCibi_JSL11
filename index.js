@@ -197,7 +197,7 @@ function setupEventListeners() {
   });
 
   // Add new task form submission event listener
-  elements.createNewTaskBtn.addEventListener('submit', (event) => {
+  elements.modalWindow.addEventListener('submit', (event) => {
     addTask(event)
   });
 }
@@ -218,9 +218,9 @@ function addTask(event) {
   //Assign user input to the task object
     const task = {
       id: Date.now(),
-      title: document.getElementById("task-title").value,
-      description: document.getElementById("desc-input").value,
-      status: document.getElementById("select-status").value,
+      title: elements.titleInput.value,
+      description: elements.descriptionInput.value,
+      status: elements.selectStatus.value,
       board: activeBoard
     };
 
