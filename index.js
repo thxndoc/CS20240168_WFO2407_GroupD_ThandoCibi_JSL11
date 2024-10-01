@@ -197,7 +197,7 @@ function setupEventListeners() {
   });
 
   // Add new task form submission event listener
-  elements.modalWindow.addEventListener('submit', (event) => {
+  elements.createNewTaskBtn.addEventListener('submit', (event) => {
     addTask(event)
   });
 }
