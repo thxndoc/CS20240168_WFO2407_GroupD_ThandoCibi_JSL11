@@ -248,9 +248,8 @@ function toggleTheme() {
   const lightTheme = document.body.classList.contains("light-theme")
   localStorage.setItem("light-theme", lightTheme ? "enabled" : "disabled")
 
-  logo.src = lightTheme ? "./assets/logo-light.svg" : "./assets/logo-dark.svg";
+ elements.logo.src = lightTheme ? "./assets/logo-light.svg" : "./assets/logo-dark.svg";
 }
-
 
 function openEditTaskModal(task) {
   // Set task details in modal inputs
@@ -310,6 +309,8 @@ function init() {
   toggleSidebar(showSidebar);
   const isLightTheme = localStorage.getItem('light-theme') === 'enabled';
   document.body.classList.toggle('light-theme', isLightTheme);
+
+  elements.logo.src = isLightTheme ? "./assets/logo-light.svg" : "./assets/logo-dark.svg";
 
   initializeData();
   fetchAndDisplayBoardsAndTasks(); // Initial display of boards and tasks
