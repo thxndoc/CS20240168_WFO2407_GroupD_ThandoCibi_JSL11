@@ -299,6 +299,8 @@ header {
   gap: 20px;
   margin-top: auto;
   margin-bottom: 40px;
+  position: absolute;
+  bottom: 20px
 }
 
 /* Edit task */
