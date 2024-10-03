@@ -2,7 +2,7 @@
 [My Loom Video](insert link here)
 
 ## Documenting my progress 💻💭
-### Bud Fixes
+### Bug Fixes
 1. Bug fix: `initializeData` function - Line 18
     - **What I did:** Added `null` to the if statement to explicitly return `null` when no data exists and removed the `!`. Now if statement reads as "if data in local storage is `null` (does not exist), then add initialData."
     - **Challenges:** None so far
@@ -26,12 +26,33 @@
 
 2. Completed function for `toggleSideBar`
     - **What I did:**Fetched elements and set display
-    -**Why:** To control the visibility of the sidebar based on whether `show` is true or false
+    - **Why:** To control the visibility of the sidebar based on whether `show` is true or false
 
 3. Completed function for `toggleTheme`
     - **What I did:**
-    - `document.body.classList.toggle("light-theme")`: check to see if `light-theme` class exists in the body and toggle on and off
-    - `const lightTheme = document.body.classList.contains("light-theme")`
+    - `document.body.classList.toggle("light-theme")`: check to see if `light-theme` class exists in the body and toggle on and off.
+    - `const lightTheme = document.body.classList.contains("light-theme")`.
+
+4. Completed function for `openEditTaskModal`
+    - **What I did:**
+    - Modal to open when clicked and set task details in modal inputs so user can add information and also edit the task and use buttons to save, cancel and delete tasks.
+
+5. Completed function for `saveTaskChanges`
+    - **What I did:**
+    - Update task details using a helper function and changes to reflect immediately without a manual refresh.
+
+6. Added new function: `openConfirmDeleteModal`
+    - **What I did:**
+    - Added a function to open a confirmation modal when user presses the delete button.
+    - **Why:**
+    - So that the user doesn't accidentally delete a task and has to confirm first.
+
+### Challenges 
+For this project, I noticed that some functions weren't working as expected. I then realised that this was due to using incorrect IDs when fetching certain elements. These errors ranged from simple typos to just typing entirely wrong IDs.<br>
+Another challenge I faced was when trying to append tasks from `initialData.js` to the bottom of the tasks list in the corresponding column when changing a status. I also wanted to update the local storage to ensure these tasks remained at the bottom of the list. However, I've decided to revisit this particular challenge at a later date when refactoring my code.
+
+### What I learned
+I learned that its extremely important to plan, test as you go and double check your work. A tip that we received from our coding coach is to copy/paste IDs when fetching elements because it significantly reduces the risk of a typo. Another tip we got is to name our variables exactly like the ID (and always remember to name things semantically). Otherwise it felt good to see the project working and how things get stored, edited, removed in local storage. There are definitely areas of improvement and I will be revisiting this project to refactor and improve some things.
 
 
 ### [JSL11] Agile Board - Kanban Task Management App
