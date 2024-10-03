@@ -2,22 +2,21 @@
 [My Loom Video](insert link here)
 
 ## Documenting my progress 💻💭
-### Bug Fixes
-1. Bug fix: `initializeData` function - Line 18
+1. `initializeData` function
     - **What I did:** Added `null` to the if statement to explicitly return `null` when no data exists and removed the `!`. Now if statement reads as "if data in local storage is `null` (does not exist), then add initialData."
     - **Challenges:** None so far
     - **What I learned:** Explicitly returning `null` for data that does not exist prevents problems in the long run when there are falsy values added to localStorage. Ensures consistency.
-
-2. Bug fix: functions - lines 61, 156, 172, 173
+### Bug Fixes
+1. Bug fix: functions - lines 63, 156, 172, 173
     - **What I did:** Fixed syntax errors for click event handler to `[X].addEventListener ("click", () => {...})`
 
-3. Bug fix: `filterAndDisplayTasksByBoard` function
+2. Bug fix: `filterAndDisplayTasksByBoard` function
     - **What I did:** Fixed comparison operators from `=` to `===`
 
-4. Bug fix: `styleActiveBoard` function
+3. Bug fix: `styleActiveBoard` function
     - **What I did:** Changed `foreach` to `forEach` & added `classList` to methods
 
-5. Bug fix: `addTaskToUI` function
+4. Bug fix: `addTaskToUI` function
     - **What I did:** Changed double quotes to backticks for template literal and added missing argument to `appendChild`
 
 ### Solutions to incomplete function code
@@ -54,6 +53,8 @@ Another challenge I faced was when trying to append tasks from `initialData.js` 
 ### What I learned
 I learned that its extremely important to plan, test as you go and double check your work. A tip that we received from our coding coach is to copy/paste IDs when fetching elements because it significantly reduces the risk of a typo. Another tip we got is to name our variables exactly like the ID (and always remember to name things semantically). Otherwise it felt good to see the project working and how things get stored, edited, removed in local storage. There are definitely areas of improvement and I will be revisiting this project to refactor and improve some things.
 
+### Credit:
+Structure for confirm delete modal: [W3Schools](https://www.w3schools.com/howto/howto_css_modals.asp)
 
 ### [JSL11] Agile Board - Kanban Task Management App
 
