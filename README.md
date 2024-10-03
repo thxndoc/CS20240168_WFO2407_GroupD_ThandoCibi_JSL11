@@ -1,6 +1,9 @@
 ## Link to Loom video
 [My Loom Video](insert link here)
 
+## Google Slides
+[My Google Slides](https://docs.google.com/presentation/d/1p0aGO760nOLcT_AiofWjrdtS1QYQX8aeBjBmUrHcr2k/edit?usp=sharing)
+
 ## Documenting my progress 💻💭
 1. `initializeData` function
     - **What I did:** Added `null` to the if statement to explicitly return `null` when no data exists and removed the `!`. Now if statement reads as "if data in local storage is `null` (does not exist), then add initialData."
