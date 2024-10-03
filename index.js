@@ -42,7 +42,10 @@ selectStatus: document.getElementById("select-status"),
 editTaskTitleInput: document.getElementById("edit-task-title-input"),
 editTaskDescInput: document.getElementById("edit-task-desc-input"),
 editSelectStatus: document.getElementById("edit-select-status"),
-editTaskModalWindow: document.querySelector(".edit-task-modal-window")
+editTaskModalWindow: document.querySelector(".edit-task-modal-window"),
+confirmDeleteModal: document.getElementById("confirm-delete-modal"),
+confirmDeleteBtn: document.getElementById("confirm-delete-btn"),
+cancelDeleteBtn: document.getElementById("cancel-delete-btn")
 }
 
 let activeBoard = ""
@@ -266,9 +269,11 @@ function openEditTaskModal(task) {
   saveTaskChangesBtn.onclick = () => saveTaskChanges(task.id)
   // Delete task using a helper function and close the task modal
   deleteTaskBtn.onclick = () => {
-    deleteTask(task.id)
-    toggleModal(false, elements.editTaskModalWindow); //hide the edit task modal
-    refreshTasksUI()
+    openConfirmDeleteModal(() => {
+      deleteTask(task.id)
+      toggleModal(false, elements.editTaskModalWindow); //hide the edit task modal
+      refreshTasksUI()
+    });
   }
 
   cancelEditBtn.onclick = () => {
@@ -297,6 +302,20 @@ function saveTaskChanges(taskId) {
   refreshTasksUI();
 }
 
+
+function openConfirmDeleteModal(onConfirm) {
+  elements.confirmDeleteModal.style.display = "block";
+
+  elements.confirmDeleteBtn.onclick = () => {
+    elements.confirmDeleteModal.style.display = "none";
+    onConfirm();
+  };
+
+  elements.cancelDeleteBtn.onclick = () => {
+    elements.confirmDeleteModal.style.display = "none";
+  };
+
+}
 /*************************************************************************************************************************************************/
 
 document.addEventListener('DOMContentLoaded', function() {
