@@ -1,5 +1,5 @@
 ## Link to Loom video
-[My Loom Video](insert link here)
+[My Loom Video](https://www.loom.com/share/8e1f33b924b54319b0b28d4b4e56768f)
 
 ## Google Slides
 [My Google Slides](https://docs.google.com/presentation/d/1p0aGO760nOLcT_AiofWjrdtS1QYQX8aeBjBmUrHcr2k/edit?usp=sharing)
