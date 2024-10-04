@@ -57,7 +57,8 @@ Another challenge I faced was when trying to append tasks from `initialData.js` 
 I learned that its extremely important to plan, test as you go and double check your work. A tip that we received from our coding coach is to copy/paste IDs when fetching elements because it significantly reduces the risk of a typo. Another tip we got is to name our variables exactly like the ID (and always remember to name things semantically). Otherwise it felt good to see the project working and how things get stored, edited, removed in local storage. There are definitely areas of improvement and I will be revisiting this project to refactor and improve some things.
 
 ### Credit:
-Structure for confirm delete modal: [W3Schools](https://www.w3schools.com/howto/howto_css_modals.asp)
+- Structure for confirm delete modal: [W3Schools](https://www.w3schools.com/howto/howto_css_modals.asp)
+- How to generate unique ID: [Medium](https://medium.com/@nksCodingLearnings/how-to-generate-unique-ids-in-javascript-cbf51be30165)
 
 ### [JSL11] Agile Board - Kanban Task Management App
 
