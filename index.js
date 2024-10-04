@@ -73,10 +73,12 @@ function fetchAndDisplayBoardsAndTasks() {
 function displayBoards(boards) {
   const boardsContainer = document.getElementById("boards-nav-links-div");
   boardsContainer.innerHTML = ''; // Clears the container
+
   boards.forEach(board => {
     const boardElement = document.createElement("button");
     boardElement.textContent = board;
     boardElement.classList.add("board-btn");
+
     boardElement.addEventListener ("click", () => { //🪲 added an event listener (just said boardElement.click)
       elements.headerBoardName.textContent = board;
       filterAndDisplayTasksByBoard(board);
@@ -84,6 +86,7 @@ function displayBoards(boards) {
       localStorage.setItem("activeBoard", JSON.stringify(activeBoard))
       styleActiveBoard(activeBoard)
     });
+
     boardsContainer.appendChild(boardElement);
   });
 
@@ -96,7 +99,6 @@ function filterAndDisplayTasksByBoard(boardName) {
   const filteredTasks = tasks.filter(task => task.board === boardName); //🪲 syntax error: = to ===
 
   // Ensure the column titles are set outside of this function or correctly initialized before this function runs
-
   elements.columnDivs.forEach(column => {
     const status = column.getAttribute("data-status");
     // Reset column content while preserving the column title
@@ -281,7 +283,6 @@ function openEditTaskModal(task) {
   }
 
   toggleModal(true, elements.editTaskModalWindow); // Show the edit task modal
-
 }
 
 function saveTaskChanges(taskId) {
@@ -314,7 +315,6 @@ function openConfirmDeleteModal(onConfirm) {
   elements.cancelDeleteBtn.onclick = () => {
     elements.confirmDeleteModal.style.display = "none";
   };
-
 }
 /*************************************************************************************************************************************************/
 
